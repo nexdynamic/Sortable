@@ -215,11 +215,11 @@ const autoScroll = throttle(function(evt, options, rootEl, isFallback) {
 
 
 		if (el === winScroller) {
-			canScrollX = width < scrollWidth && (elCSS.overflowX === 'auto' || elCSS.overflowX === 'scroll' || elCSS.overflowX === 'visible');
-			canScrollY = height < scrollHeight && (elCSS.overflowY === 'auto' || elCSS.overflowY === 'scroll' || elCSS.overflowY === 'visible');
+			canScrollX = width < scrollWidth // && (elCSS.overflowX === 'auto' || elCSS.overflowX === 'scroll' || elCSS.overflowX === 'visible');
+			canScrollY = height < scrollHeight // && (elCSS.overflowY === 'auto' || elCSS.overflowY === 'scroll' || elCSS.overflowY === 'visible');
 		} else {
-			canScrollX = width < scrollWidth && (elCSS.overflowX === 'auto' || elCSS.overflowX === 'scroll');
-			canScrollY = height < scrollHeight && (elCSS.overflowY === 'auto' || elCSS.overflowY === 'scroll');
+			canScrollX = width < scrollWidth // && (elCSS.overflowX === 'auto' || elCSS.overflowX === 'scroll');
+			canScrollY = height < scrollHeight // && (elCSS.overflowY === 'auto' || elCSS.overflowY === 'scroll');
 		}
 
 		let vx = canScrollX && (Math.abs(right - x) <= sens && (scrollPosX + width) < scrollWidth) - (Math.abs(left - x) <= sens && !!scrollPosX);
